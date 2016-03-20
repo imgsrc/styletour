@@ -186,6 +186,7 @@ h3 {
 .main-menu .navbar-inverse .navbar-nav > li > a {
     color: #ffffff;
     font-size: 16px;
+    transition: background .5s;
 }
 
 .main-menu .navbar-inverse .navbar-nav > li > a:hover {
@@ -274,11 +275,29 @@ h3 {
         padding-left: 0;
         padding-right: 0;
     }
+    .main-menu .navbar-inverse .navbar-nav > li > a:hover {
+        text-decoration: none;
+        background: #222222;
+    }
+    .main-menu .navbar-form {
+        margin: 8px 0;
+    }
+    .main-menu .navbar-brand img {
+        max-height: 50px;
+    }
+    .main-menu .navbar-toggle.collapsed + .navbar-brand img {
+        max-height: none;
+        position: relative;
+        z-index: 20;
+    }
 }
 
 @media only screen and (max-width: 480px) {
     .menu-carousel .carousel-caption .btn-red {
         font-size: 12px;
+    }
+    .main-menu .navbar-toggle.collapsed + .navbar-brand img {
+        max-height: 80px;
     }
 }
 
