@@ -178,7 +178,50 @@ h3 {
     margin-right: 0;
 }
 
+.main-menu .navbar-inverse {
+    background: transparent;
+    border: none;
+}
 
+.main-menu {
+    position: absolute;
+    z-index: 21;
+    width: 100%;
+    top: 30px;
+}
+
+.main-menu .navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;
+    font-size: 16px;
+    transition: background .5s;
+}
+
+.main-menu .navbar-inverse .navbar-nav>li>a:hover {
+    text-decoration: underline;
+}
+
+.menu-carousel .main-menu .navbar-brand {
+    padding: 0;
+    margin-left: 30px;
+}
+
+.main-menu .navbar-brand img {
+    float: left;
+}
+
+.main-menu .navbar-brand span {
+    display: inline-block;
+    padding: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /*font-size: 30px;*/
+    color: #ffffff;
+}
+
+.main-menu-bg {
+    background: #000000;
+    border-radius: 3px;
+}
 
 
 
@@ -196,14 +239,21 @@ h3 {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+    .main-menu .navbar-nav,
     .menu-top .navbar-nav {
         float: none !important;
+    }
+    .main-menu .navbar-form {
+        margin-left: 125px;
     }
 }
 
 @media only screen and (max-width : 1070px) {
     .menu-carousel .carousel-caption {
         left: 20%;
+    }
+    .main-menu .navbar-form {
+        margin-left: 125px;
     }
 }
 
@@ -213,17 +263,18 @@ h3 {
     .menu-carousel .carousel-caption h1 {
         font-size: 40px;
     }
-
     .menu-carousel .carousel-caption h3 {
         font-weight: 400;
         font-size: 22px;
     }
-	
+    .main-menu .navbar-inverse .navbar-nav>li>a {
+        font-size: 14px;
+    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-    .navbar-default .navbar-nav>li>a:hover {
+    .menu-top .navbar-default .navbar-nav>li>a:hover {
         background: #eeeeee;
     }
     .menu-top .container,
@@ -246,11 +297,34 @@ h3 {
         padding: 15px 20px;
         font-size: 16px;
     }
+    .main-menu .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .main-menu .navbar-inverse .navbar-nav>li>a:hover {
+        text-decoration: none;
+        background: #222222;
+    }
+    .main-menu .navbar-form {
+        margin: 8px 0;
+
+    }
+    .main-menu .navbar-brand img {
+        max-height: 50px;
+    }
+    .main-menu .navbar-toggle.collapsed + .navbar-brand img {
+        max-height: none;
+        position: relative;
+        z-index: 20;
+    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
     .menu-carousel .carousel-caption .btn-red {
         font-size: 14px;
+    }
+    .main-menu .navbar-toggle.collapsed + .navbar-brand img {
+        max-height: 80px;
     }
 }
