@@ -1,12 +1,13 @@
 $(function(){
 	$('.carousel').carousel({
-		// interval: false
+		interval: false
 	});
 
 	$('.search').on('click', function(){
 		$('.main-menu .navbar-form').slideToggle();
 	});
-    $('#elastislide').elastislide();
+
+	$('#elastislide').elastislide();
 });
 
 $(window).load(function(){
